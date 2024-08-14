@@ -4,14 +4,14 @@ import 'package:clean_arch_template/src/presentation/pages/auth/example/bloc/exa
 import 'package:clean_arch_template/src/presentation/pages/auth/example/bloc/example_state.dart';
 import 'package:clean_arch_template/src/presentation/pages/auth/example/example_content.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class ExamplePage extends StatefulWidget {
+  const ExamplePage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<ExamplePage> createState() => _ExamplePageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _ExamplePageState extends State<ExamplePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -5,3 +5,5 @@ This is a template to create apps with the bests practices and tools.
 * Dependency Injection
 * Bloc Pattern
 * MVVM Architecture
+* Go Router
+

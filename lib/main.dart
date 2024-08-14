@@ -1,3 +1,4 @@
+import 'package:clean_arch_template/src/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:clean_arch_template/blocProviders.dart';
@@ -18,18 +19,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: blocProviders,
-      child: MaterialApp(
+      child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
           useMaterial3: true,
         ),
-        initialRoute: 'login',
-        routes: {
-          'login': (context) => const LoginPage(),
-          // 'register': (context) => const RegisterPage(),
-        },
+        routeInformationParser: AppRouter().router.routeInformationParser,
+        routeInformationProvider: AppRouter().router.routeInformationProvider,
+        routerDelegate: AppRouter().router.routerDelegate,
       ),
     );
   }
